@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtualenvs
+.venv/
+venv/
+env/
+.env
+
+# Editor / OS / agent scratch
+.DS_Store
+.agents
+.idea/
+.vscode/
+
+# Model weights & checkpoints — downloaded or trained at runtime, never committed
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+checkpoints/
+checkpoint/
+outputs/
+output/
+test_sdxl_sd3/
+
+# Runtime training dirs (populated inside the container during training)
+img/
+datasets/
+test_data/
+*_tourn.zip
+cache/
+.cache/
+
+# Logs / archives / samples / temp (individual-training & eval artifacts)
+*.log
+*.zip
+*.tar
+*.tar.gz
+samples/
+sample/
+wandb/
+tmp/
+*.tmp
+
+# Agent workspace (Claude Code) — LOCAL-ONLY, never tracked/pushed.
+.claude/
+
+# Family working memory (state + competitor intel) — LOCAL-ONLY, never shipped.
+MEMORY.md
+
+# local working dirs / run-sims (all families: examp-image/text/env, examples) — never tracked/pushed
+examp*
+examples
+drafts/
+# local dumps + helpers (recipe-revealing task configs / regenerated caches) — never shipped
+rekapconfig/
+scripts/envs/.expert_cache/
+scripts/ej.sh
+eval_all.sh
+patch_eval.py
+trainer-env-passthrough.patch
+# analisa task family TEXT (config-id / jsonid hasil scraping) — bukan artefak image, jangan muncul di branch ini
+scraping-task/
+
+# local GPU harness (benchmarking against the validator-published splits); not part of the submission
+scripts/local/
